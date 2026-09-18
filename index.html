@@ -1,97 +1,143 @@
-
-<!DOCTYPE html
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tega's Website</title>
+
+    <title>Tega Web Design</title>
 
     <style>
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f2f4f7;
+            background: #f4f7fb;
             color: #222;
+            line-height: 1.6;
         }
 
         header {
-            background: #0d47a1;
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 80px 20px;
         }
 
         header h1 {
-            font-size: 38px;
-            margin: 0 0 10px;
+            font-size: 44px;
+            margin-bottom: 15px;
         }
 
         header p {
-            font-size: 18px;
-            margin: 0;
+            font-size: 19px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .main-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 28px;
+            background: white;
+            color: #0d47a1;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
         }
 
         section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 40px 25px;
             background: white;
-            max-width: 800px;
-            margin: 25px auto;
-            padding: 30px 20px;
-            border-radius: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-radius: 18px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             text-align: center;
         }
 
         h2 {
             color: #0d47a1;
-            margin-top: 0;
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        .about-text {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
         }
 
         .service {
-            background: #f2f4f7;
-            margin: 12px 0;
-            padding: 15px;
-            border-radius: 10px;
+            background: #f1f5ff;
+            padding: 25px 15px;
+            border-radius: 15px;
         }
 
         .service h3 {
-            margin: 0 0 5px;
             color: #0d47a1;
+            margin-bottom: 10px;
         }
 
-        .button {
+        .portfolio {
+            background: #f1f5ff;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-button {
             display: inline-block;
+            margin-top: 20px;
+            padding: 14px 28px;
             background: #0d47a1;
             color: white;
-            padding: 14px 25px;
-            margin-top: 15px;
-            border-radius: 10px;
             text-decoration: none;
+            border-radius: 30px;
             font-weight: bold;
-        }
-
-        .button:hover {
-            background: #1565c0;
         }
 
         footer {
             background: #0d47a1;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 25px 15px;
+            margin-top: 40px;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
+            header {
+                padding: 60px 20px;
+            }
+
             header h1 {
-                font-size: 30px;
+                font-size: 34px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
             }
 
             section {
-                margin: 15px;
+                margin: 20px 15px;
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 26px;
             }
         }
     </style>
@@ -100,51 +146,109 @@
 <body>
 
     <header>
-        <h1>Tega's Website</h1>
-        <p>Simple. Modern. Professional Websites.</p>
+        <h1>Tega Web Design</h1>
+
+        <p>
+            I create modern, simple and mobile-friendly websites
+            for businesses, brands and individuals.
+        </p>
+
+        <a href="#contact" class="main-button">
+            Let's Work Together
+        </a>
     </header>
 
-    <section>
+
+    <section id="about">
         <h2>About Me</h2>
-        <p>
-            I'm Tega, a web designer who creates simple,
-            beautiful and mobile-friendly websites for businesses
-            and individuals.
+
+        <p class="about-text">
+            I'm Tega, a web designer focused on creating clean,
+            professional and easy-to-use websites. I help businesses
+            and individuals build a strong presence online.
         </p>
     </section>
 
-    <section>
+
+    <section id="services">
         <h2>My Services</h2>
 
-        <div class="service">
-            <h3>Website Design</h3>
-            <p>I create clean and professional websites.</p>
-        </div>
+        <div class="services">
 
-        <div class="service">
-            <h3>Mobile-Friendly Websites</h3>
-            <p>I make websites that work well on phones and computers.</p>
-        </div>
+            <div class="service">
+                <h3>Website Design</h3>
 
-        <div class="service">
-            <h3>Website Updates</h3>
-            <p>I can update and improve existing websites.</p>
+                <p>
+                    Professional websites designed to represent
+                    your business or personal brand.
+                </p>
+            </div>
+
+
+            <div class="service">
+                <h3>Mobile-Friendly Websites</h3>
+
+                <p>
+                    Websites that look great and work properly
+                    on phones, tablets and computers.
+                </p>
+            </div>
+
+
+            <div class="service">
+                <h3>Website Updates</h3>
+
+                <p>
+                    Updating, improving and maintaining
+                    existing websites.
+                </p>
+            </div>
+
         </div>
     </section>
 
-    <section>
-        <h2>Contact Me</h2>
+
+    <section id="portfolio">
+        <h2>My Work</h2>
+
+        <div class="portfolio">
+
+            <h3>Tega Web Design</h3>
+
+            <p>
+                This website is one of my projects.
+                More projects will be added here as I continue
+                building websites for clients.
+            </p>
+
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <h2>Let's Work Together</h2>
+
         <p>
-            Need a website for your business or personal project?
+            Do you need a website for your business,
+            brand or personal project?
         </p>
 
-        <a class="button" href="markpeterson778888@gmail.com">
+        <p>
+            Get in touch with me to discuss your project.
+        </p>
+
+        <a href="#about" class="contact-button">
             Contact Me
         </a>
     </section>
 
+
     <footer>
-        <p>© 2026 Tega's Website</p>
+        <p>© 2026 Tega Web Design</p>
+
+        <p>
+            Simple. Modern. Professional.
+        </p>
     </footer>
 
 </body>
